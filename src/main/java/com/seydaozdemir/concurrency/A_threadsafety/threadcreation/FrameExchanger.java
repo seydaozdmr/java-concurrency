@@ -9,19 +9,24 @@ public class FrameExchanger {
     private Frame frame;
 
     public void storeFrame(Frame frame){
+        while(hasNewFrame){
+            //System.out.println("waiting");
+        }
 
         this.frame=frame;
         this.framesStoredCount++;
+        System.out.println("stored "+framesStoredCount);
         this.hasNewFrame=true;
 
     }
 
     public Frame takeFrame(){
         while(!hasNewFrame){
-
+            //System.out.println("waiting");
         }
         Frame newFrame= this.frame;
         this.framesTakenCount++;
+        System.out.println("taken "+framesStoredCount);
         this.hasNewFrame=false;
         return newFrame;
     }
