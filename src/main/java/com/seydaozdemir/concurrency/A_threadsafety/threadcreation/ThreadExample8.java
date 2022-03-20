@@ -3,13 +3,18 @@ package com.seydaozdemir.concurrency.A_threadsafety.threadcreation;
 public class ThreadExample8 {
     public static class StoppableRunnable implements Runnable{
         private boolean stopRequest=false;
+        private Object object=new Object();
 
-        public synchronized void requestStop(){
-            this.stopRequest=true;
+        public void requestStop(){
+            synchronized (object){
+                this.stopRequest=true;
+            }
         }
 
-        public synchronized boolean isStopRequested(){
-            return this.stopRequest;
+        public boolean isStopRequested(){
+            synchronized (object){
+                return this.stopRequest;
+            }
         }
 
         private void sleep(long millis){
@@ -30,6 +35,8 @@ public class ThreadExample8 {
             System.out.println("stopped");
         }
     }
+
+
     public static void main(String[] args) {
         StoppableRunnable stoppableRunnable=new StoppableRunnable();
         Thread t1=new Thread(stoppableRunnable);
