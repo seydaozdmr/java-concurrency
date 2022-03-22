@@ -1,4 +1,4 @@
-package com.seydaozdemir.concurrency.A_threadsafety.threadlocal;
+package com.seydaozdemir.concurrency.A_threadsafety.threadcreation.threadlocal;
 
 public class ThreadLocalLazyInitialize {
     static ThreadLocal<String> threadLocal=new ThreadLocal();
