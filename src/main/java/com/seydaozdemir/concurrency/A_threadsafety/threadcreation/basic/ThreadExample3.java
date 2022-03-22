@@ -1,4 +1,4 @@
-package com.seydaozdemir.concurrency.A_threadsafety.threadcreation;
+package com.seydaozdemir.concurrency.A_threadsafety.threadcreation.basic;
 
 public class ThreadExample3 {
     public static class MyRunnable implements Runnable{

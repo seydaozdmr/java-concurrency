@@ -1,4 +1,6 @@
-package com.seydaozdemir.concurrency.A_threadsafety.threadcreation;
+package com.seydaozdemir.concurrency.A_threadsafety.threadcreation.basic;
+
+import com.seydaozdemir.concurrency.A_threadsafety.threadcreation.racecondition.MyRunnableSharedObject;
 
 public class ThreadExample13 {
 

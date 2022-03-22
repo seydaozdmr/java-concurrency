@@ -1,4 +1,4 @@
-package com.seydaozdemir.concurrency.A_threadsafety.threadcreation;
+package com.seydaozdemir.concurrency.A_threadsafety.threadcreation.basic;
 
 public class ThreadExample8 {
     public static class StoppableRunnable implements Runnable{
@@ -46,6 +46,10 @@ public class ThreadExample8 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        stoppableRunnable.requestStop();
+        Thread t2=new Thread(()->{
+            stoppableRunnable.requestStop();
+        });
+        t2.start();
+        //stoppableRunnable.requestStop();
     }
 }
