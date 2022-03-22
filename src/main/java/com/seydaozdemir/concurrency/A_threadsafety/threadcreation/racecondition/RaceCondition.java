@@ -1,4 +1,4 @@
-package com.seydaozdemir.concurrency.A_threadsafety.threadcreation;
+package com.seydaozdemir.concurrency.A_threadsafety.threadcreation.racecondition;
 
 public class RaceCondition {
     Runnable r1=new Runnable() {

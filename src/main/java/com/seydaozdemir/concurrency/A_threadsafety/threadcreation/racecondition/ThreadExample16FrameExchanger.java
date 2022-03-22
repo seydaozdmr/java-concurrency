@@ -1,4 +1,6 @@
-package com.seydaozdemir.concurrency.A_threadsafety.threadcreation;
+package com.seydaozdemir.concurrency.A_threadsafety.threadcreation.racecondition;
+
+import com.seydaozdemir.concurrency.A_threadsafety.threadcreation.racecondition.FrameExchanger;
 
 import java.awt.*;
 

@@ -1,6 +1,4 @@
-package com.seydaozdemir.concurrency.A_threadsafety.threadcreation;
-
-import java.util.Arrays;
+package com.seydaozdemir.concurrency.A_threadsafety.threadcreation.racecondition;
 
 public class VolatileCounter {
     private volatile int count=0;
