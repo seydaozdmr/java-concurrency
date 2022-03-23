@@ -15,7 +15,8 @@ public class DeadLockExample {
         Lock lock2=new ReentrantLock();
 
         Runnable runnable1=new Runnable1(lock1,lock2);
-        Runnable runnable2=new Runnable1(lock1,lock2);
+        //Runnable runnable2=new Runnable2(lock1,lock2); -> caused deadlock, solution is reordering locks.
+        Runnable runnable2=new Runnable2(lock2,lock1);
 
         Thread t1=new Thread(runnable1);
         Thread t2=new Thread(runnable2);
