@@ -1,5 +1,9 @@
 package com.seydaozdemir.concurrency.A_threadsafety.threadcreation.compareandswap;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class OptimisticLockCounter {
@@ -18,4 +22,5 @@ public class OptimisticLockCounter {
     public long get(){
         return this.atomicLong.get();
     }
+
 }
